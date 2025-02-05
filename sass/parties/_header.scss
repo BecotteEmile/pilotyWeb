@@ -1,0 +1,55 @@
+header{
+    border: 10px solid red;
+
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+
+    .logoSite{
+        width: 5rem;
+        height: auto;
+    }
+
+    nav{
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+
+        #chkBurger{
+            display: none;
+        }
+
+        .burger{
+            display: flex;
+            background-color: var(--couleurSecondaire);
+            width: 3rem;
+            height: 3rem;
+            transform: skew(-10deg);
+
+            justify-content: center;
+            align-items: center;
+
+            .burgerInt{
+                width: 85%;
+                height: 85%;
+                border: 1.5px solid var(--couleurPrincipale);
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .ligneBurger{
+                    margin: 0.3rem;
+                    width: 85%;
+                    height: 5%;
+                    background-color: var(--couleurPrincipale);
+                }
+            }
+        }
+
+        .contenuNav{
+            display: none;
+        }
+    }
+}
