@@ -1,7 +1,19 @@
+// @font-face {
+//     font-family: "interBold";
+//     src: url(../font/Inter/Inter_24pt-Bold.ttf);
+// }
+
+// @font-face {
+//     font-family: "interBlack";
+//     src: url(../font/Inter/Inter_24pt-BlackItalic.ttf);
+// }
+
 :root{
     --couleurPrincipale: #EE6F00;
     --couleurSecondaire: #050B32;
     --couleurBordures: #371D06;
 
     --formeBtnBurger: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+
+    font-family: fantasy;
 }

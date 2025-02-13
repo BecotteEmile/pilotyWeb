@@ -1,5 +1,5 @@
 header{
-    border: 10px solid red;
+    // border: 10px solid red;
 
     display: flex;
     flex-flow: nowrap row;
@@ -14,9 +14,13 @@ header{
         display: flex;
         flex-flow: nowrap column;
         justify-content: center;
+        position: relative;
 
         #chkBurger{
             display: none;
+        }
+        #chkBurger:checked ~ .contenuNav {
+           transform: skew(-10deg) translateX(-77%) translateY(90%)
         }
 
         .burger{
@@ -49,7 +53,41 @@ header{
         }
 
         .contenuNav{
-            display: none;
+            position: absolute;
+            width: 76vw;
+            height: 50vh;
+            transform: skew(-10deg) translateX(100%) translateY(90%);
+            background-color: var(--couleurSecondaire);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 6px 5px 16px 1px #6b747b;;
+
+            transition: transform 1s;
+
+            
+            .navInt{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: space-around;
+                height: 97%;
+                width: 97%;
+                border: 1.5px solid var(--couleurPrincipale);
+
+                .optionNav{
+                    // font-family: interBlack;
+                    background-color: var(--couleurPrincipale);
+                    color: var(--couleurSecondaire);
+                    width: 90%;
+                    height: 30%;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.75rem;
+                }
+            }
         }
     }
 }
