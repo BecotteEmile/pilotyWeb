@@ -8,12 +8,13 @@
     .section{
         position: relative;
         background-color: var(--couleurSecondaire);
-        width: 90%;
+        width: 95%;
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 0.5rem;
         transform: skewY(-10deg);
         
         .titreTexte{
@@ -26,11 +27,13 @@
             background-image: url("images/motifSection.png");
             background-size: 5rem;
             border: 1px solid var(--couleurPrincipale);
-            width: 92%;
-            height: 60%;
-            padding: 0.5rem;
+            width: 100%;
+            padding: 0.25rem;
             padding-top: 2rem;
             padding-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
             p{
                 transform: skewY(10deg);

@@ -158,12 +158,13 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
 .thoughtProcess .section {
   position: relative;
   background-color: var(--couleurSecondaire);
-  width: 90%;
+  width: 95%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
   transform: skewY(-10deg);
 }
 .thoughtProcess .section .titreTexte {
@@ -175,11 +176,13 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   background-image: url("images/motifSection.png");
   background-size: 5rem;
   border: 1px solid var(--couleurPrincipale);
-  width: 92%;
-  height: 60%;
-  padding: 0.5rem;
+  width: 100%;
+  padding: 0.25rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .thoughtProcess .section .sectionInt p {
   transform: skewY(10deg);
@@ -210,6 +213,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   flex-direction: column;
   align-items: center;
   padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 .journalDeBord .jdbBtns {
   display: flex;
@@ -271,6 +275,27 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   background-color: var(--couleurBordures);
   width: 3.5rem;
   height: 5.5rem;
+}
+.journalDeBord .contenuSemaine {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  transform: skew(-5deg);
+  margin-top: 2rem;
+  background-color: var(--couleurSecondaire);
+}
+.journalDeBord .contenuSemaine .semInt {
+  background-image: url("images/motifSection.png");
+  background-size: 5rem;
+  border: 1px solid var(--couleurPrincipale);
+  width: 100%;
+  min-height: 20vh;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer {
