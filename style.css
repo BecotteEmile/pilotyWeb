@@ -257,6 +257,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   background-color: var(--couleurBordures);
   margin-bottom: 1rem;
   box-shadow: 5px 4px 10px rgba(93, 93, 93, 0.4705882353);
+  flex-basis: 15%;
 }
 .journalDeBord .jdbBtns .btnjdb .partieVisible {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -331,6 +332,30 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   font-size: 0.75rem;
 }
 
+@media (min-width: 768px) {
+  .journalDeBord .contenuSemaine .semInt {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+  .journalDeBord .contenuSemaine .semInt img {
+    flex-basis: 30%;
+    max-height: none;
+    max-width: 15rem;
+    height: auto;
+  }
+  .journalDeBord .contenuSemaine .semInt p {
+    align-self: start;
+    line-height: 1.25rem;
+    flex-basis: 60%;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .journalDeBord .contenuSemaine {
+    width: 70%;
+  }
+}
 footer {
   background-color: var(--couleurBordures);
   color: var(--couleurPrincipale);

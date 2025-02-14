@@ -25,6 +25,7 @@
             background-color: var(--couleurBordures);
             margin-bottom: 1rem;
             box-shadow: 5px 4px 10px #5d5d5d78;
+            flex-basis: 15%;
     
             .partieVisible{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -109,6 +110,39 @@
                 color: white;
                 font-size: 0.75rem;
             }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .journalDeBord{
+        .contenuSemaine{
+            .semInt{
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0.5rem;
+
+                img{
+                    flex-basis: 30%;
+                    max-height: none;
+                    max-width: 15rem;
+                    height: auto;
+                }
+    
+                p{
+                    align-self: start;
+                    line-height: 1.25rem;
+                    flex-basis: 60%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    .journalDeBord{
+        .contenuSemaine{
+            width: 70%;
         }
     }
 }
