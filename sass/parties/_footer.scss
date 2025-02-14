@@ -5,7 +5,7 @@ footer{
     background-image: url(images/logoFooter.png);
     background-size: 14rem;
     background-repeat: no-repeat;
-    background-position: -15% 18%;
+    background-position: -3rem 1rem;
     display: flex;
     justify-content: end;
 
@@ -36,6 +36,24 @@ footer{
                 }
             }
 
+        }
+    }
+}
+
+
+@media (min-width: 1024px){
+    footer{
+        background-position: -2rem -2rem;
+
+        .conteneurFooter{
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                li{
+                }
+            }
         }
     }
 }

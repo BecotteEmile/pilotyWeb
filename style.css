@@ -153,7 +153,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   flex-direction: column;
   align-items: center;
   padding-left: 1rem;
-  height: 50vh;
+  margin-bottom: 4rem;
 }
 .thoughtProcess .section {
   position: relative;
@@ -176,8 +176,8 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   padding: 0.5rem;
   transform: skew(10deg);
   position: absolute;
-  top: -18%;
-  left: -1%;
+  top: -2rem;
+  left: -0.25rem;
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
   width: 50%;
 }
@@ -187,11 +187,24 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   border: 1px solid var(--couleurPrincipale);
   width: 100%;
   padding: 0.25rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.thoughtProcess .section .sectionInt .partieImg {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transform: skewY(10deg);
+}
+.thoughtProcess .section .sectionInt .partieImg img {
+  max-height: 5rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
 .thoughtProcess .section .sectionInt p {
   transform: skewY(10deg);
@@ -305,6 +318,17 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   padding: 0.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.journalDeBord .contenuSemaine .semInt img {
+  max-height: 5rem;
+  width: auto;
+}
+.journalDeBord .contenuSemaine .semInt p {
+  color: white;
+  font-size: 0.75rem;
 }
 
 footer {
@@ -314,7 +338,7 @@ footer {
   background-image: url(images/logoFooter.png);
   background-size: 14rem;
   background-repeat: no-repeat;
-  background-position: -15% 18%;
+  background-position: -3rem 1rem;
   display: flex;
   justify-content: end;
   display: flex;
@@ -340,4 +364,15 @@ footer .conteneurFooter ul li a svg {
   height: 2rem;
   width: auto;
   margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    background-position: -2rem -2rem;
+  }
+  footer .conteneurFooter ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }/*# sourceMappingURL=style.css.map */

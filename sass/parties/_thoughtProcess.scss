@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding-left: 1rem;
-    height: 50vh;
+    margin-bottom: 4rem;
 
     .section{
         position: relative;
@@ -26,8 +26,8 @@
             padding: 0.5rem;
             transform: skew(10deg);
             position: absolute;
-            top: -18%;
-            left: -1%;
+            top: -2rem;
+            left: -0.25rem;
             clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
             width: 50%;
         }
@@ -38,11 +38,26 @@
             border: 1px solid var(--couleurPrincipale);
             width: 100%;
             padding: 0.25rem;
-            padding-top: 2rem;
+            padding-top: 3rem;
             padding-bottom: 2rem;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            .partieImg{
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                transform: skewY(10deg);
+
+                img{
+                    max-height: 5rem;
+                    width: auto;
+                    margin-bottom: 1rem;
+                }
+            }
             
             p{
                 transform: skewY(10deg);
