@@ -15,7 +15,7 @@
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
-        transform: skewY(-10deg);
+        transform: skewY(-5deg);
         
         .titreTexte{
             display: flex;
@@ -24,7 +24,7 @@
             color: white;
             background-color: #048AFF;
             padding: 0.5rem;
-            transform: skew(10deg);
+            transform: skew(4deg);
             position: absolute;
             top: -2rem;
             left: -0.25rem;
@@ -50,7 +50,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                transform: skewY(10deg);
+                transform: skewY(4deg);
 
                 img{
                     max-height: 5rem;
@@ -60,7 +60,7 @@
             }
             
             p{
-                transform: skewY(10deg);
+                transform: skewY(4deg);
                 color: white;
                 font-size: 0.75rem;
             }
@@ -73,7 +73,7 @@
     align-self: flex-start;
     width: 60%;
     padding: 0.3rem;
-    transform: rotate(-5deg) skew(-10deg);
+    transform: rotate(-5deg) skew(-5deg);
     margin-bottom: 3rem;
         
     .titreSectionInt{
@@ -84,6 +84,32 @@
             color: var(--couleurPrincipale);
             font-size: 1.5rem;
             margin: 0;
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+    .titreSection{
+        width: 30%;
+    }
+
+    .thoughtProcess{
+        .section{
+            width: 70%;
+
+            .titreTexte{
+                width: 50%;
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    .thoughtProcess{
+        .section{
+            .titreTexte{
+                width: 30%;
+            }
         }
     }
 }
