@@ -168,9 +168,18 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   transform: skewY(-10deg);
 }
 .thoughtProcess .section .titreTexte {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  background-color: #048AFF;
+  padding: 0.5rem;
+  transform: skew(10deg);
   position: absolute;
-  top: -100%;
-  left: auto;
+  top: -18%;
+  left: -1%;
+  clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
+  width: 50%;
 }
 .thoughtProcess .section .sectionInt {
   background-image: url("images/motifSection.png");
