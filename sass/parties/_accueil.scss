@@ -38,6 +38,15 @@
             }
         }
     }
+}
 
-
+@media (min-width: 768px){
+    .accueil{
+        .video{
+            iframe{
+                width: clamp(25rem, 13.459rem + 24.0437vw, 36rem);
+                height: clamp(14rem, 7.4426rem + 13.6612vw, 20.25rem);
+            }
+        }
+    }
 }

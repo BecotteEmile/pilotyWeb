@@ -11,28 +11,37 @@
 
 
     <header>
-        <img class="logoSite" src="images/logo.png" alt="logo du site web">
-        
-        <nav class="nav">
-            <input type="checkbox" name="" id="chkBurger">
-            <label class="burger" for="chkBurger">
-                <div class="burgerInt">
-                    <div class="ligneBurger"></div>
-                    <div class="ligneBurger"></div>
-                    <div class="ligneBurger"></div>
-                </div>
-            </label>
+        <div class="conteneurHeader">
+            <img class="logoSite" src="images/logo.png" alt="logo du site web">
             
-            <div class="conteneurContenuNav">
-                <div class="contenuNav">
-                    <div class="navInt">
-                        <a class="optionNav" href="">Thought process</a>
-                        <a class="optionNav" href="">Journal de bord</a>
+            <nav class="nav">
+                <input type="checkbox" name="" id="chkBurger">
+                <label class="burger" for="chkBurger">
+                    <div class="burgerInt">
+                        <div class="ligneBurger"></div>
+                        <div class="ligneBurger"></div>
+                        <div class="ligneBurger"></div>
+                    </div>
+                </label>
+                
+                <div class="conteneurContenuNav">
+                    <div class="contenuNav">
+                        <div class="navInt">
+                            <a class="optionNav" href="#thoughtProcess">
+                                <div class="optionNavInt">
+                                    Thought process
+                                </div>
+                            </a>
+                            <a class="optionNav" href="#journalDeBord">
+                                <div class="optionNavInt">
+                                    Journal de bord
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-
+            </nav>
+        </div>
     </header>
 
 
@@ -41,14 +50,17 @@
         <section class="accueil">
 
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/OgU_UDYd9lY?si=rSOxrcHoAkI5fXt7" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/eGdmqfcbDSs?si=qlmo969v7gZ1gmx8" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen>
                 </iframe>
                 <div class="lesBtns">
-                    <a class="btn" href="">B</a>
-                    <a class="btn" href="">B</a>
+                    <a class="btn" href="#thoughtProcess">B</a>
+                    <a class="btn" href="#journalDeBord">B</a>
                 </div>
             </div>
 
@@ -56,7 +68,7 @@
 
         <div class="division1"></div>
 
-        <section class="thoughtProcess">
+        <section id="thoughtProcess" class="thoughtProcess">
 
             <div class="titreSection">
                 <div class="titreSectionInt">
@@ -87,7 +99,7 @@
 
         <div class="division2"></div>
 
-        <section class="journalDeBord">
+        <section id="journalDeBord" class="journalDeBord">
 
             <div class="titreSection">
                 <div class="titreSectionInt">
@@ -151,7 +163,7 @@
             <h3>Contacts:</h3>
             <ul>
                 <li>
-                    <a href="">
+                    <a href="http://www.youtube.com/@TimmyMonke1234">
                         <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.89 79.11">
                             <defs>
                                 <style>
@@ -185,7 +197,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://github.com/BecotteEmile">
                         <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.89 79.11">
                             <defs>
                                 <style>
@@ -219,7 +231,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://www.behance.net/milebcotte">
                         <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.89 79.11">
                             <defs>
                                 <style>

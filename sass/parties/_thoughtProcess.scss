@@ -2,13 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 1rem;
     margin-bottom: 4rem;
 
     .section{
         position: relative;
         background-color: var(--couleurSecondaire);
-        width: 95%;
+        width: 90%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -75,6 +74,7 @@
     padding: 0.3rem;
     transform: rotate(-5deg) skew(-5deg);
     margin-bottom: 3rem;
+    margin-left: 1rem;
         
     .titreSectionInt{
         border: 1px solid var(--couleurPrincipale);
