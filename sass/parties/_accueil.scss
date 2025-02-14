@@ -1,0 +1,43 @@
+.accueil{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+    .video{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%;
+
+        iframe{
+            height: 9rem;
+            width: 16rem;
+        }
+
+        .lesBtns{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+
+            a{
+                background-color: ghostwhite;
+                color: black;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+            }
+
+            img{
+                width: 5rem;
+                height: auto;
+            }
+        }
+    }
+
+
+}

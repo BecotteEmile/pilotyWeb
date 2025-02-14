@@ -1,3 +1,6 @@
 html{
-    background-color: rgb(241, 215, 215);
+    position: relative;
+    background-color: var(--couleurPrincipale);
+    background-image: url("images/motifSite.png");
+    background-size: contain;
 }

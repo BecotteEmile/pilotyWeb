@@ -1,13 +1,24 @@
+@font-face {
+  font-family: "interBold";
+  src: url("font/Inter/Inter_24pt-Bold.ttf");
+}
+@font-face {
+  font-family: "interBlack";
+  src: url("font/Inter/Inter_24pt-BlackItalic.ttf");
+}
 :root {
   --couleurPrincipale: #EE6F00;
   --couleurSecondaire: #050B32;
   --couleurBordures: #371D06;
   --formeBtnBurger: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-  font-family: fantasy;
+  font-family: interBold;
 }
 
 html {
-  background-color: rgb(241, 215, 215);
+  position: relative;
+  background-color: var(--couleurPrincipale);
+  background-image: url("images/motifSite.png");
+  background-size: contain;
 }
 
 header {
@@ -23,15 +34,18 @@ header nav {
   display: flex;
   flex-flow: nowrap column;
   justify-content: center;
-  position: relative;
 }
 header nav #chkBurger {
   display: none;
 }
-header nav #chkBurger:checked ~ .contenuNav {
-  transform: skew(-10deg) translateX(-77%) translateY(90%);
+header nav #chkBurger:checked ~ .conteneurContenuNav {
+  z-index: 0;
+}
+header nav #chkBurger:checked ~ .conteneurContenuNav .contenuNav {
+  transform: skew(-10deg) translateX(22%) translateY(40%);
 }
 header nav .burger {
+  z-index: 2;
   display: flex;
   background-color: var(--couleurSecondaire);
   width: 3rem;
@@ -55,11 +69,20 @@ header nav .burger .burgerInt .ligneBurger {
   height: 5%;
   background-color: var(--couleurPrincipale);
 }
-header nav .contenuNav {
+header nav .conteneurContenuNav {
+  z-index: -1;
   position: absolute;
-  width: 76vw;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+header nav .conteneurContenuNav .contenuNav {
+  z-index: 2;
+  width: 75vw;
   height: 50vh;
-  transform: skew(-10deg) translateX(100%) translateY(90%);
+  transform: skew(-10deg) translateX(200%) translateY(40%);
   background-color: var(--couleurSecondaire);
   display: flex;
   justify-content: center;
@@ -67,7 +90,7 @@ header nav .contenuNav {
   box-shadow: 6px 5px 16px 1px #6b747b;
   transition: transform 1s;
 }
-header nav .contenuNav .navInt {
+header nav .conteneurContenuNav .contenuNav .navInt {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -76,7 +99,7 @@ header nav .contenuNav .navInt {
   width: 97%;
   border: 1.5px solid var(--couleurPrincipale);
 }
-header nav .contenuNav .navInt .optionNav {
+header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   background-color: var(--couleurPrincipale);
   color: var(--couleurSecondaire);
   width: 90%;
@@ -86,4 +109,76 @@ header nav .contenuNav .navInt .optionNav {
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
+}
+
+.accueil {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.accueil .video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70%;
+}
+.accueil .video iframe {
+  height: 9rem;
+  width: 16rem;
+}
+.accueil .video .lesBtns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.accueil .video .lesBtns a {
+  background-color: ghostwhite;
+  color: black;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.accueil .video .lesBtns img {
+  width: 5rem;
+  height: auto;
+}
+
+footer {
+  background-color: var(--couleurBordures);
+  color: var(--couleurPrincipale);
+  font-family: interBlack;
+  background-image: url(images/logoFooter.png);
+  background-size: 14rem;
+  background-repeat: no-repeat;
+  background-position: -15% 18%;
+  display: flex;
+  justify-content: end;
+  display: flex;
+  justify-content: end;
+}
+footer .conteneurFooter {
+  flex-basis: 50%;
+}
+footer .conteneurFooter ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+footer .conteneurFooter ul li {
+  margin-bottom: 0.5rem;
+}
+footer .conteneurFooter ul li a {
+  color: var(--couleurPrincipale);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+footer .conteneurFooter ul li a svg {
+  height: 2rem;
+  width: auto;
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
