@@ -148,6 +148,113 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   height: auto;
 }
 
+.thoughtProcess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  height: 50vh;
+}
+.thoughtProcess .section {
+  position: relative;
+  background-color: var(--couleurSecondaire);
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: skewY(-10deg);
+}
+.thoughtProcess .section .titreTexte {
+  position: absolute;
+  top: -100%;
+  left: auto;
+}
+.thoughtProcess .section .sectionInt {
+  background-image: url("images/motifSection.png");
+  background-size: 5rem;
+  border: 1px solid var(--couleurPrincipale);
+  width: 92%;
+  height: 60%;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.thoughtProcess .section .sectionInt p {
+  transform: skewY(10deg);
+  color: white;
+  font-size: 0.75rem;
+}
+
+.titreSection {
+  background-color: var(--couleurSecondaire);
+  align-self: flex-start;
+  width: 60%;
+  padding: 0.3rem;
+  transform: rotate(-5deg) skew(-10deg);
+  margin-bottom: 3rem;
+}
+.titreSection .titreSectionInt {
+  border: 1px solid var(--couleurPrincipale);
+  padding: 0.3rem;
+}
+.titreSection .titreSectionInt h1.texteTitre {
+  color: var(--couleurPrincipale);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.journalDeBord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+}
+.journalDeBord .jdbBtns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  transform: rotate(-5deg);
+}
+.journalDeBord .jdbBtns .btnjdb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 2rem;
+  padding: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  transform: skew(-5deg);
+  background-color: var(--couleurBordures);
+  margin-bottom: 1rem;
+  box-shadow: 5px 4px 10px rgba(93, 93, 93, 0.4705882353);
+}
+.journalDeBord .jdbBtns .btnjdb .partieVisible {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 75%;
+  width: 80%;
+  color: var(--couleurBordures);
+  background-color: var(--couleurPrincipale);
+}
+.journalDeBord .jdbBtns .btnjdb .partieCachee {
+  color: var(--couleurPrincipale);
+}
+.journalDeBord .jdbBtns .style1 {
+  clip-path: polygon(3% 0, 100% 0, 95% 70%, 97% 100%, 0 100%, 5% 30%);
+}
+.journalDeBord .jdbBtns .style2 {
+  clip-path: polygon(4% 0, 100% 0, 95% 50%, 100% 100%, 7% 100%, 0% 70%);
+}
+.journalDeBord .jdbBtns .style3 {
+  clip-path: polygon(5% 0, 93% 0, 100% 30%, 95% 100%, 5% 100%, 0% 50%);
+}
+
 footer {
   background-color: var(--couleurBordures);
   color: var(--couleurPrincipale);

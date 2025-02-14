@@ -1,0 +1,62 @@
+.thoughtProcess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    height: 50vh;
+
+    .section{
+        position: relative;
+        background-color: var(--couleurSecondaire);
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: skewY(-10deg);
+        
+        .titreTexte{
+            position: absolute;
+            top: -100%;
+            left: auto;
+        }
+        
+        .sectionInt{
+            background-image: url("images/motifSection.png");
+            background-size: 5rem;
+            border: 1px solid var(--couleurPrincipale);
+            width: 92%;
+            height: 60%;
+            padding: 0.5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            
+            p{
+                transform: skewY(10deg);
+                color: white;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+.titreSection{
+    background-color: var(--couleurSecondaire);
+    align-self: flex-start;
+    width: 60%;
+    padding: 0.3rem;
+    transform: rotate(-5deg) skew(-10deg);
+    margin-bottom: 3rem;
+        
+    .titreSectionInt{
+        border: 1px solid var(--couleurPrincipale);
+        padding: 0.3rem;
+
+        h1.texteTitre{
+            color: var(--couleurPrincipale);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+    }
+}

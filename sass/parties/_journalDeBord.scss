@@ -1,0 +1,55 @@
+.journalDeBord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+
+    .jdbBtns{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        transform: rotate(-5deg);
+
+        .btnjdb{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 2rem;
+            padding: 2rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            transform: skew(-5deg);
+            background-color: var(--couleurBordures);
+            margin-bottom: 1rem;
+            box-shadow: 5px 4px 10px #5d5d5d78;
+    
+            .partieVisible{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                height: 75%;
+                width: 80%;
+                color: var(--couleurBordures);
+                background-color: var(--couleurPrincipale);
+            }
+    
+            .partieCachee{
+                color: var(--couleurPrincipale);
+            }
+        }
+
+        .style1{
+            clip-path: polygon(3% 0, 100% 0, 95% 70%, 97% 100%, 0 100%, 5% 30%);
+        }
+        .style2{
+            clip-path: polygon(4% 0, 100% 0, 95% 50%, 100% 100%, 7% 100%, 0% 70%);
+        }
+        .style3{
+            clip-path: polygon(5% 0, 93% 0, 100% 30%, 95% 100%, 5% 100%, 0% 50%);
+        }
+        
+    }
+}
