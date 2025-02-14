@@ -215,6 +215,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: center;
   transform: rotate(-5deg);
 }
 .journalDeBord .jdbBtns .btnjdb {
@@ -253,6 +254,23 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
 }
 .journalDeBord .jdbBtns .style3 {
   clip-path: polygon(5% 0, 93% 0, 100% 30%, 95% 100%, 5% 100%, 0% 50%);
+}
+.journalDeBord .jdbBtns .fleche {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.journalDeBord .jdbBtns .fleche .ligneFleche {
+  clip-path: polygon(0% 0, 100% 0, 100% 15%, 80% 25%, 100% 35%, 100% 100%, 20% 100%, 0% 75%);
+  background-color: var(--couleurBordures);
+  width: 1rem;
+  height: 3.5rem;
+}
+.journalDeBord .jdbBtns .fleche .flecheFleche {
+  clip-path: polygon(5% 20%, 60% 25%, 60% 10%, 100% 50%, 60% 90%, 60% 75%, 5% 80%, 5% 50%, 0% 40%, 5% 30%);
+  background-color: var(--couleurBordures);
+  width: 3.5rem;
+  height: 5.5rem;
 }
 
 footer {
