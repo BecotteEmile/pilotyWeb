@@ -10,8 +10,8 @@
         content: "";
         width: 7%;
         height: 20%;
-        top: -4rem;
-        left: 0rem;
+        top: -15%;
+        left: 0%;
         background: var(--couleurBordures);
         clip-path: polygon(0 0%, 100% 0, 0 100%); 
     }
@@ -20,7 +20,7 @@
         content: "";
         width: 7%;
         height: 100%;
-        top: 2rem;
+        top: 5%;
         left: 93vw;
         background: var(--couleurBordures);
         clip-path: polygon(10% 100%, 100% 85%, 100% 100%);
@@ -141,10 +141,10 @@
         width: 90%;
 
         &::before{
-            left: -5vw;
+            left: -6%;
         }
         &::after{
-            left: 88.7vw;
+            left: 98.55%;
             clip-path: polygon(10% 100%, 100% 65%, 100% 100%);
         }
         

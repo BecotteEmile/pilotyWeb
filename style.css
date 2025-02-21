@@ -15,7 +15,7 @@
 }
 
 .division1 {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background-color: var(--couleurBordures);
   clip-path: polygon(0 70%, 100% 0, 100% 50%, 0% 100%);
@@ -23,7 +23,7 @@
 }
 
 .division2 {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background-color: var(--couleurBordures);
   clip-path: polygon(0% 0%, 100% 70%, 100% 100%, 0% 50%);
@@ -197,7 +197,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   justify-content: center;
   align-items: center;
   height: 70vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 .accueil::before {
@@ -208,7 +208,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   clip-path: polygon(0% 0%, 100% 0%, 60% 30%, 60% 72%, 100% 100%, 0% 100%);
   position: absolute;
   z-index: -1;
-  top: -15vh;
+  top: -23%;
   left: 0rem;
 }
 .accueil::after {
@@ -219,8 +219,8 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   clip-path: polygon(0% 100%, 60% 75%, 100% 25%, 100% 100%);
   position: absolute;
   z-index: -1;
-  top: -15vh;
-  left: 65vw;
+  top: -23%;
+  left: 65%;
 }
 .accueil .video {
   display: flex;
@@ -254,9 +254,9 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
 
 @media (min-width: 768px) {
   .accueil::before {
-    height: 137%;
+    height: 140%;
     clip-path: polygon(0% 0%, 90% 0%, 45% 100%, 0% 100%);
-    top: -18vh;
+    top: -30%;
   }
   .accueil::after {
     clip-path: polygon(30% 100%, 100% 15%, 100% 100%);
@@ -278,7 +278,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   content: "";
   width: 7%;
   height: 20%;
-  top: -4rem;
+  top: -22%;
   left: 93vw;
   background: var(--couleurBordures);
   clip-path: polygon(0 0%, 100% 0, 100% 100%);
@@ -377,7 +377,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
     width: 90%;
   }
   .thoughtProcess::before {
-    left: 88.7vw;
+    left: 98.55%;
   }
   .thoughtProcess::after {
     left: -5vw;
@@ -406,8 +406,8 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   content: "";
   width: 7%;
   height: 20%;
-  top: -4rem;
-  left: 0rem;
+  top: -15%;
+  left: 0%;
   background: var(--couleurBordures);
   clip-path: polygon(0 0%, 100% 0, 0 100%);
 }
@@ -416,7 +416,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   content: "";
   width: 7%;
   height: 100%;
-  top: 2rem;
+  top: 5%;
   left: 93vw;
   background: var(--couleurBordures);
   clip-path: polygon(10% 100%, 100% 85%, 100% 100%);
@@ -522,10 +522,10 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
     width: 90%;
   }
   .journalDeBord::before {
-    left: -5vw;
+    left: -6%;
   }
   .journalDeBord::after {
-    left: 88.7vw;
+    left: 98.55%;
     clip-path: polygon(10% 100%, 100% 65%, 100% 100%);
   }
   .journalDeBord .contenuSemaine .semInt {

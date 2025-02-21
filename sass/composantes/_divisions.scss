@@ -1,5 +1,5 @@
 .division1{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: var(--couleurBordures);
     clip-path: polygon(0 70%, 100% 0, 100% 50%, 0% 100%);
@@ -7,7 +7,7 @@
 }
 
 .division2{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: var(--couleurBordures);
     clip-path: polygon(0% 0%, 100% 70%, 100% 100%, 0% 50%);

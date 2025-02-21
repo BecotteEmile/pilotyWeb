@@ -4,8 +4,9 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
+
 
     &::before{
         content: "";
@@ -15,7 +16,7 @@
         clip-path: polygon(0% 0%, 100% 0%, 60% 30%, 60% 72%, 100% 100%, 0% 100%);
         position: absolute;
         z-index: -1;
-        top: -15vh;
+        top: -23%;
         left: 0rem;
     }
     &::after{
@@ -26,8 +27,8 @@
         clip-path: polygon(0% 100%, 60% 75%, 100% 25%, 100% 100%);
         position: absolute;
         z-index: -1;
-        top: -15vh;
-        left: 65vw;
+        top: -23%;
+        left: 65%;
     }
 
     .video{
@@ -68,9 +69,9 @@
 @media (min-width: 768px){
     .accueil{
         &::before{
-            height: 137%;
+            height: 140%;
             clip-path: polygon(0% 0%, 90% 0%, 45% 100%, 0% 100%);
-            top: -18vh;
+            top: -30%;
         }
         &::after{
             clip-path: polygon(30% 100%, 100% 15%, 100% 100%);
