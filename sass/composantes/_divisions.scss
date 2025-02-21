@@ -1,0 +1,15 @@
+.division1{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--couleurBordures);
+    clip-path: polygon(0 70%, 100% 0, 100% 50%, 0% 100%);
+    margin-bottom: 1rem;
+}
+
+.division2{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--couleurBordures);
+    clip-path: polygon(0% 0%, 100% 70%, 100% 100%, 0% 50%);
+    margin-bottom: 1rem;
+}

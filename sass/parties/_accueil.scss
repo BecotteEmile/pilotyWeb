@@ -4,6 +4,31 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
+    width: 100vw;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-color: var(--couleurBordures);
+        width: 35%;
+        height: 133%;
+        clip-path: polygon(0% 0%, 100% 0%, 60% 30%, 60% 72%, 100% 100%, 0% 100%);
+        position: absolute;
+        z-index: -1;
+        top: -15vh;
+        left: 0rem;
+    }
+    &::after{
+        content: "";
+        background-color: var(--couleurBordures);
+        width: 35%;
+        height: 128%;
+        clip-path: polygon(0% 100%, 60% 75%, 100% 25%, 100% 100%);
+        position: absolute;
+        z-index: -1;
+        top: -15vh;
+        left: 65vw;
+    }
 
     .video{
         display: flex;
@@ -42,6 +67,15 @@
 
 @media (min-width: 768px){
     .accueil{
+        &::before{
+            height: 137%;
+            clip-path: polygon(0% 0%, 90% 0%, 45% 100%, 0% 100%);
+            top: -18vh;
+        }
+        &::after{
+            clip-path: polygon(30% 100%, 100% 15%, 100% 100%);
+        }
+
         .video{
             iframe{
                 width: clamp(25rem, 13.459rem + 24.0437vw, 36rem);

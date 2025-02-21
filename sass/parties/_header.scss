@@ -1,9 +1,12 @@
 header{
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     
     .conteneurHeader{
-        width: 80%;
+        width: 85%;
         display: flex;
         flex-flow: nowrap row;
         justify-content: space-between;
@@ -138,6 +141,7 @@ header{
                         flex-flow: row nowrap;
                         justify-content: space-evenly;
                         width: 80%;
+                        border: none;
 
                         .optionNav{
                             flex-basis: 47%;

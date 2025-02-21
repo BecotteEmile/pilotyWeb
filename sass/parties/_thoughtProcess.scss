@@ -3,6 +3,28 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 4rem;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 20%;
+        top: -4rem;
+        left: 93vw;
+        background: var(--couleurBordures);
+        clip-path: polygon(0 0%, 100% 0, 100% 100%); 
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 100%;
+        top: 5rem;
+        left: 0vw;
+        background: var(--couleurBordures);
+        clip-path: polygon(0 100%, 0% 75%, 100% 100%);
+    }
 
     .section{
         position: relative;
@@ -94,7 +116,17 @@
         width: 30%;
     }
 
+
     .thoughtProcess{
+        width: 90%;
+
+        &::before{
+            left: 88.7vw;
+        }
+        &::after{
+            left: -5vw;
+        }
+
         .section{
             width: 70%;
 

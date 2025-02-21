@@ -3,6 +3,28 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 20%;
+        top: -4rem;
+        left: 0rem;
+        background: var(--couleurBordures);
+        clip-path: polygon(0 0%, 100% 0, 0 100%); 
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 100%;
+        top: 2rem;
+        left: 93vw;
+        background: var(--couleurBordures);
+        clip-path: polygon(10% 100%, 100% 85%, 100% 100%);
+    }
 
     .jdbBtns{
         display: flex;
@@ -116,6 +138,16 @@
 
 @media (min-width: 768px){
     .journalDeBord{
+        width: 90%;
+
+        &::before{
+            left: -5vw;
+        }
+        &::after{
+            left: 88.7vw;
+            clip-path: polygon(10% 100%, 100% 65%, 100% 100%);
+        }
+        
         .contenuSemaine{
             .semInt{
                 flex-direction: row;

@@ -14,6 +14,22 @@
   font-family: interBold;
 }
 
+.division1 {
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--couleurBordures);
+  clip-path: polygon(0 70%, 100% 0, 100% 50%, 0% 100%);
+  margin-bottom: 1rem;
+}
+
+.division2 {
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--couleurBordures);
+  clip-path: polygon(0% 0%, 100% 70%, 100% 100%, 0% 50%);
+  margin-bottom: 1rem;
+}
+
 html {
   position: relative;
   background-color: var(--couleurPrincipale);
@@ -21,12 +37,21 @@ html {
   background-size: contain;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 header .conteneurHeader {
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-flow: nowrap row;
   justify-content: space-between;
@@ -141,6 +166,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     width: 80%;
+    border: none;
   }
   header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
     flex-basis: 47%;
@@ -171,6 +197,30 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   justify-content: center;
   align-items: center;
   height: 70vh;
+  width: 100vw;
+  position: relative;
+}
+.accueil::before {
+  content: "";
+  background-color: var(--couleurBordures);
+  width: 35%;
+  height: 133%;
+  clip-path: polygon(0% 0%, 100% 0%, 60% 30%, 60% 72%, 100% 100%, 0% 100%);
+  position: absolute;
+  z-index: -1;
+  top: -15vh;
+  left: 0rem;
+}
+.accueil::after {
+  content: "";
+  background-color: var(--couleurBordures);
+  width: 35%;
+  height: 128%;
+  clip-path: polygon(0% 100%, 60% 75%, 100% 25%, 100% 100%);
+  position: absolute;
+  z-index: -1;
+  top: -15vh;
+  left: 65vw;
 }
 .accueil .video {
   display: flex;
@@ -203,6 +253,14 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
 }
 
 @media (min-width: 768px) {
+  .accueil::before {
+    height: 137%;
+    clip-path: polygon(0% 0%, 90% 0%, 45% 100%, 0% 100%);
+    top: -18vh;
+  }
+  .accueil::after {
+    clip-path: polygon(30% 100%, 100% 15%, 100% 100%);
+  }
   .accueil .video iframe {
     width: clamp(25rem, 13.459rem + 24.0437vw, 36rem);
     height: clamp(14rem, 7.4426rem + 13.6612vw, 20.25rem);
@@ -213,6 +271,27 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   flex-direction: column;
   align-items: center;
   margin-bottom: 4rem;
+  position: relative;
+}
+.thoughtProcess::before {
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 20%;
+  top: -4rem;
+  left: 93vw;
+  background: var(--couleurBordures);
+  clip-path: polygon(0 0%, 100% 0, 100% 100%);
+}
+.thoughtProcess::after {
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 100%;
+  top: 5rem;
+  left: 0vw;
+  background: var(--couleurBordures);
+  clip-path: polygon(0 100%, 0% 75%, 100% 100%);
 }
 .thoughtProcess .section {
   position: relative;
@@ -294,6 +373,15 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   .titreSection {
     width: 30%;
   }
+  .thoughtProcess {
+    width: 90%;
+  }
+  .thoughtProcess::before {
+    left: 88.7vw;
+  }
+  .thoughtProcess::after {
+    left: -5vw;
+  }
   .thoughtProcess .section {
     width: 70%;
   }
@@ -311,6 +399,27 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  position: relative;
+}
+.journalDeBord::before {
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 20%;
+  top: -4rem;
+  left: 0rem;
+  background: var(--couleurBordures);
+  clip-path: polygon(0 0%, 100% 0, 0 100%);
+}
+.journalDeBord::after {
+  position: absolute;
+  content: "";
+  width: 7%;
+  height: 100%;
+  top: 2rem;
+  left: 93vw;
+  background: var(--couleurBordures);
+  clip-path: polygon(10% 100%, 100% 85%, 100% 100%);
 }
 .journalDeBord .jdbBtns {
   display: flex;
@@ -409,6 +518,16 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
 }
 
 @media (min-width: 768px) {
+  .journalDeBord {
+    width: 90%;
+  }
+  .journalDeBord::before {
+    left: -5vw;
+  }
+  .journalDeBord::after {
+    left: 88.7vw;
+    clip-path: polygon(10% 100%, 100% 65%, 100% 100%);
+  }
   .journalDeBord .contenuSemaine .semInt {
     flex-direction: row;
     justify-content: space-around;
