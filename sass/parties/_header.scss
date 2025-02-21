@@ -97,6 +97,11 @@ header{
                     border: 1.5px solid var(--couleurPrincipale);
     
                     .optionNav{
+
+                        &:hover{
+                            transform: translateY(-0.5rem);
+                        }
+
                         // font-family: interBlack;
                         background-color: var(--couleurPrincipale);
                         color: var(--couleurSecondaire);
@@ -107,6 +112,7 @@ header{
                         align-items: center;
                         justify-content: center;
                         font-size: 1.75rem;
+                        transition: transform 1s;
                     }
                 }
             }
@@ -128,6 +134,7 @@ header{
                 position: static;
                 height: auto;
                 width: 100%;
+                overflow: visible;
 
                 .contenuNav{
                     transform: skew(-10deg) translateX(0%) translateY(0%);

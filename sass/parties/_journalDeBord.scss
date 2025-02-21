@@ -46,11 +46,17 @@
             transform: skew(-5deg);
             background-color: var(--couleurBordures);
             margin-bottom: 1rem;
-            box-shadow: 5px 4px 10px #5d5d5d78;
+            // box-shadow: 5px 4px 10px #5d5d5d78;
             flex-basis: 15%;
+
+            &:hover{
+                .partieVisible{
+                    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
+                }
+            }
     
             .partieVisible{
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                clip-path: polygon(-20% 0%, 100% 0, 100% 100%, 0% 100%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -59,6 +65,7 @@
                 width: 80%;
                 color: var(--couleurBordures);
                 background-color: var(--couleurPrincipale);
+                transition: clip-path 1s;
             }
     
             .partieCachee{

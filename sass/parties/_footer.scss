@@ -22,6 +22,11 @@ footer{
 
             li{
                 margin-bottom: 0.5rem;
+                transition: transform 1s;
+
+                &:hover{
+                    transform: translate(0.5rem) skew(-5deg);
+                }
                 a{
                     color: var(--couleurPrincipale);
                     text-decoration: none;

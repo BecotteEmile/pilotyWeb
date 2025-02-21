@@ -35,6 +35,7 @@ html {
   background-color: var(--couleurPrincipale);
   background-image: url("images/motifSite.png");
   background-size: contain;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -42,7 +43,18 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main img {
+  animation: animImg 10s ease-in-out infinite alternate;
+}
 
+@keyframes animImg {
+  from {
+    box-shadow: 0px 0px 0px 0px #e26900;
+  }
+  to {
+    box-shadow: 1px 1px 10px 0px #e26900;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -139,6 +151,10 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
+  transition: transform 1s;
+}
+header nav .conteneurContenuNav .contenuNav .navInt .optionNav:hover {
+  transform: translateY(-0.5rem);
 }
 
 @media (min-width: 768px) {
@@ -153,6 +169,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
     position: static;
     height: auto;
     width: 100%;
+    overflow: visible;
   }
   header nav .conteneurContenuNav .contenuNav {
     transform: skew(-10deg) translateX(0%) translateY(0%);
@@ -441,11 +458,13 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   transform: skew(-5deg);
   background-color: var(--couleurBordures);
   margin-bottom: 1rem;
-  box-shadow: 5px 4px 10px rgba(93, 93, 93, 0.4705882353);
   flex-basis: 15%;
 }
+.journalDeBord .jdbBtns .btnjdb:hover .partieVisible {
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
+}
 .journalDeBord .jdbBtns .btnjdb .partieVisible {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(-20% 0%, 100% 0, 100% 100%, 0% 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,6 +473,7 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav {
   width: 80%;
   color: var(--couleurBordures);
   background-color: var(--couleurPrincipale);
+  transition: clip-path 1s;
 }
 .journalDeBord .jdbBtns .btnjdb .partieCachee {
   color: var(--couleurPrincipale);
@@ -573,6 +593,10 @@ footer .conteneurFooter ul {
 }
 footer .conteneurFooter ul li {
   margin-bottom: 0.5rem;
+  transition: transform 1s;
+}
+footer .conteneurFooter ul li:hover {
+  transform: translate(0.5rem) skew(-5deg);
 }
 footer .conteneurFooter ul li a {
   color: var(--couleurPrincipale);
