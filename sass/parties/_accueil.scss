@@ -41,28 +41,6 @@
             height: 9rem;
             width: 16rem;
         }
-
-        .lesBtns{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
-
-            a{
-                background-color: ghostwhite;
-                color: black;
-                width: 5rem;
-                height: 5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 2rem;
-            }
-
-            img{
-                width: 5rem;
-                height: auto;
-            }
-        }
     }
 }
 

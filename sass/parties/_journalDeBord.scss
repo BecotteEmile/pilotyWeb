@@ -73,6 +73,11 @@
             }
         }
 
+        #btnUtilise{
+            .partieVisible{
+                clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
+            }
+}
         .style1{
             clip-path: polygon(3% 0, 100% 0, 95% 70%, 97% 100%, 0 100%, 5% 30%);
         }

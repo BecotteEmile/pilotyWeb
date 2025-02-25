@@ -47,15 +47,88 @@ main img {
   animation: animImg 8s ease-in-out infinite alternate;
 }
 
+.image {
+  transition: transform 0.5s;
+}
+.image:hover {
+  transform: translateY(-0.5rem);
+}
+
+.zoomImg {
+  position: sticky;
+  width: 100%;
+  top: 0rem;
+  z-index: 10;
+}
+.zoomImg .contenuZoomImg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0vw;
+  background-color: rgba(255, 255, 255, 0);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  transition: clip-path 0.5s, background-color 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoomImg .contenuZoomImg img {
+  max-width: 80vw;
+  height: auto;
+}
+.zoomImg .contenuZoomImg .btnFermeture {
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--couleurSecondaire);
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  transform: skew(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+}
+.zoomImg .contenuZoomImg .btnFermeture:hover {
+  transform: translateY(-0.5rem) skew(-10deg);
+}
+.zoomImg .contenuZoomImg .btnFermeture .btnInt {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  border: 1px solid var(--couleurPrincipale);
+}
+.zoomImg .contenuZoomImg .btnFermeture .btnInt .ligneBtn {
+  width: 115%;
+  height: 0.5rem;
+  background-color: var(--couleurPrincipale);
+  position: absolute;
+}
+.zoomImg .contenuZoomImg .btnFermeture .btnInt .ligneBtn:nth-child(1) {
+  top: 45%;
+  left: -5%;
+  transform: rotate(45deg);
+}
+.zoomImg .contenuZoomImg .btnFermeture .btnInt .ligneBtn:nth-child(2) {
+  top: 45%;
+  left: -5%;
+  transform: rotate(-45deg);
+}
+.zoomImg #ouvert {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: rgba(18, 18, 29, 0.6);
+}
+
 @keyframes animImg {
   0% {
-    box-shadow: 0px 0px 0px 0px #e26900;
+    box-shadow: 1px 1px 10px 0px #e26900;
   }
-  80% {
+  20% {
     box-shadow: 0px 0px 0px 0px #e26900;
   }
   100% {
-    box-shadow: 1px 1px 10px 0px #e26900;
+    box-shadow: 0px 0px 0px 0px #e26900;
   }
 }
 header {
@@ -88,7 +161,8 @@ header nav #chkBurger {
   display: none;
 }
 header nav #chkBurger:checked ~ .conteneurContenuNav {
-  z-index: 0;
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+  background-color: rgba(9, 14, 18, 0.57);
 }
 header nav #chkBurger:checked ~ .conteneurContenuNav .contenuNav {
   transform: skew(-10deg) translateX(22%) translateY(40%);
@@ -119,13 +193,13 @@ header nav .burger .burgerInt .ligneBurger {
   background-color: var(--couleurPrincipale);
 }
 header nav .conteneurContenuNav {
-  z-index: -1;
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  transition: clip-path 0.75s, background-color 2s;
 }
 header nav .conteneurContenuNav .contenuNav {
   z-index: 2;
@@ -164,6 +238,15 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav:hover {
   transform: translateY(-0.5rem);
 }
 
+.logoSiteAnim {
+  animation: animLogo 3s ease-in-out none infinite alternate;
+}
+
+@media (max-width: 767px) {
+  .conteneurContenuNav {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
 @media (min-width: 768px) {
   header nav {
     flex-basis: 50%;
@@ -287,25 +370,6 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav:hover {
 .accueil .video iframe {
   height: 9rem;
   width: 16rem;
-}
-.accueil .video .lesBtns {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-}
-.accueil .video .lesBtns a {
-  background-color: ghostwhite;
-  color: black;
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-.accueil .video .lesBtns img {
-  width: 5rem;
-  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -516,6 +580,9 @@ header nav .conteneurContenuNav .contenuNav .navInt .optionNav:hover {
 }
 .journalDeBord .jdbBtns .btnjdb .partieCachee {
   color: var(--couleurPrincipale);
+}
+.journalDeBord .jdbBtns #btnUtilise .partieVisible {
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
 }
 .journalDeBord .jdbBtns .style1 {
   clip-path: polygon(3% 0, 100% 0, 95% 70%, 97% 100%, 0 100%, 5% 30%);
