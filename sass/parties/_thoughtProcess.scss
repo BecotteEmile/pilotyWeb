@@ -37,6 +37,7 @@
         justify-content: center;
         padding: 0.5rem;
         transform: skewY(-5deg);
+        margin-top: 5rem;
         
         .titreTexte{
             display: flex;
@@ -83,9 +84,14 @@
             p{
                 transform: skewY(4deg);
                 color: white;
-                font-size: 0.75rem;
+                font-size: 1rem;
+                line-height: 1.25rem;
             }
         }
+    }
+
+    .section:nth-of-type(2){
+        margin-top: 0rem;
     }
 }
 
