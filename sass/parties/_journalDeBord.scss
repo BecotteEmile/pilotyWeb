@@ -1,0 +1,195 @@
+.journalDeBord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 20%;
+        top: -15%;
+        left: 0%;
+        background: var(--couleurBordures);
+        clip-path: polygon(0 0%, 100% 0, 0 100%);
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width: 7%;
+        height: 100%;
+        top: 5%;
+        left: 93vw;
+        background: var(--couleurBordures);
+        clip-path: polygon(10% 100%, 100% 85%, 100% 100%);
+        z-index: -1;
+    }
+
+    .jdbBtns{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        transform: rotate(-5deg);
+        width: 70%;
+
+        .btnjdb{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 2rem;
+            padding: 2rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            transform: skew(-5deg);
+            background-color: var(--couleurBordures);
+            margin-bottom: 1rem;
+            // box-shadow: 5px 4px 10px #5d5d5d78;
+            flex-basis: 15%;
+
+            &:hover{
+                .partieVisible{
+                    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
+                }
+            }
+    
+            .partieVisible{
+                clip-path: polygon(-20% 0%, 100% 0, 100% 100%, 0% 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                height: 75%;
+                width: 80%;
+                color: var(--couleurBordures);
+                background-color: var(--couleurPrincipale);
+                transition: clip-path 1s;
+            }
+    
+            .partieCachee{
+                color: var(--couleurPrincipale);
+            }
+        }
+
+        #btnUtilise{
+            .partieVisible{
+                clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 120% 100%);
+            }
+}
+        .style1{
+            clip-path: polygon(3% 0, 100% 0, 95% 70%, 97% 100%, 0 100%, 5% 30%);
+        }
+        .style2{
+            clip-path: polygon(4% 0, 100% 0, 95% 50%, 100% 100%, 7% 100%, 0% 70%);
+        }
+        .style3{
+            clip-path: polygon(5% 0, 93% 0, 100% 30%, 95% 100%, 5% 100%, 0% 50%);
+        }
+
+        .fleche{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            .ligneFleche{
+                clip-path: polygon(0% 0, 100% 0, 100% 15%, 80% 25%, 100% 35%, 100% 100%, 20% 100%, 0% 75%);
+                background-color: var(--couleurBordures);
+                width: 1rem;
+                height: 3.5rem;
+            }
+
+            .flecheFleche{
+                clip-path: polygon(5% 20%, 60% 25%, 60% 10%, 100% 50%, 60% 90%, 60% 75%, 5% 80%, 5% 50%, 0% 40%, 5% 30%);
+                background-color: var(--couleurBordures);
+                width: 3.5rem;
+                height: 5.5rem;
+            }
+        }
+        
+    }
+
+    .contenuSemaine{
+        padding: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        transform: skew(-5deg);
+        margin-top: 2rem;
+
+        background-color: var(--couleurSecondaire);
+
+        .semInt{
+            background-image: url("images/motifSection.png");
+            background-size: 5rem;
+            border: 1px solid var(--couleurPrincipale);
+            width: 100%;
+            min-height: 20vh;
+            padding: 0.5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img{
+                max-height: 5rem;
+                width: auto;
+            }
+
+            p{
+                color: white;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .journalDeBord{
+        width: 90%;
+
+        &::before{
+            left: -6%;
+        }
+        &::after{
+            left: 98.55%;
+            clip-path: polygon(10% 100%, 100% 65%, 100% 100%);
+        }
+        
+        .contenuSemaine{
+            .semInt{
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0.5rem;
+
+                img{
+                    flex-basis: 30%;
+                    max-width: 10rem;
+                    max-height: 10rem;
+                    height: auto;
+                    width: auto;
+                }
+    
+                p{
+                    align-self: start;
+                    line-height: 1.25rem;
+                    flex-basis: 60%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px){
+    .journalDeBord{
+        .contenuSemaine{
+            width: 70%;
+        }
+    }
+}

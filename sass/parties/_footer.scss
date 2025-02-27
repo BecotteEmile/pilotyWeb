@@ -1,0 +1,61 @@
+footer{
+    background-color: var(--couleurBordures);
+    color: var(--couleurPrincipale);
+    font-family: interBlack;
+    background-image: url(images/logoFooter.png);
+    background-size: 14rem;
+    background-repeat: no-repeat;
+    background-position: -3rem 1rem;
+    display: flex;
+    justify-content: end;
+
+
+    display: flex;
+    justify-content: end;
+
+    .conteneurFooter{
+        flex-basis: 50%;
+
+        ul{
+            list-style: none;
+            padding-left: 1rem;
+
+            li{
+                margin-bottom: 0.5rem;
+                transition: transform 1s;
+
+                &:hover{
+                    transform: translate(0.5rem) skew(-5deg);
+                }
+                a{
+                    color: var(--couleurPrincipale);
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+
+                    svg{
+                        height: 2rem;
+                        width: auto;
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (min-width: 1024px){
+    footer{
+        background-position: -2rem -2rem;
+
+        .conteneurFooter{
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+    }
+}
