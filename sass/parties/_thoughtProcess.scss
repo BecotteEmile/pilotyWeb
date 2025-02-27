@@ -10,10 +10,11 @@
         content: "";
         width: 7%;
         height: 20%;
-        top: -22%;
+        top: -4%;
         left: 93vw;
         background: var(--couleurBordures);
-        clip-path: polygon(0 0%, 100% 0, 100% 100%); 
+        clip-path: polygon(0 0%, 100% 0, 100% 100%);
+        z-index: -1;
     }
     &::after{
         position: absolute;
@@ -24,6 +25,7 @@
         left: 0vw;
         background: var(--couleurBordures);
         clip-path: polygon(0 100%, 0% 75%, 100% 100%);
+        z-index: -1;
     }
 
     .section{
